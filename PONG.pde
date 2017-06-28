@@ -5,21 +5,13 @@ int yspeed = 4;
 int score = 0;
 boolean gameOver = false; 
 
-
   void setup (){  
-  
-  size(400,400);
-  
-  
-  
+  size(400,400);  
 }
 
-void draw(){
-  
+void draw(){  
   background(5,5,5);
   if (!gameOver){
-    
-    
   ellipse(x,y,20,20);
   rect(10,mouseY,10,50);
   fill(255,255,255);
@@ -29,25 +21,18 @@ void draw(){
   fill(255,255,255);
 textSize(16);
 text("Score: " + score, 20, 20);
-
   if(x >= width) {
    xspeed = -xspeed;
-
   }
   if (intersects(x,y,10,mouseY,50)) {
     score ++;
     xspeed= -xspeed;
   }
- 
-  if (y >= height){
-    
+  if (y >= height){ 
    yspeed = -yspeed; 
-    
   }
     if (y <= 0){
-    
    yspeed = -yspeed; 
-    
   }
   }  
    if (x < 0) {
@@ -56,7 +41,6 @@ text("Score: " + score, 20, 20);
    text("Game Over", 180,200);
    if (mousePressed)
      System.exit(0); 
-   
   }
 }
 
